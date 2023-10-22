@@ -1,0 +1,17 @@
+{
+  "name": "real-mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon api/index.js", 
+    "start": "node api/index.js"
+  },
+  "repository": "git@github.com:sudharsan026/real-estate.git",
+  "author": "Sudharsan <sudharsan.ravichandran@whatsplan.app>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
