@@ -25,7 +25,7 @@ const SignUp = (e) => {
       });
       const data = await res.json();
       console.log(data);
-      if (data.success === false) {
+      if (data?.success === false) {
         setLoading(false);
         setError(data?.message);
         return;
@@ -36,8 +36,7 @@ const SignUp = (e) => {
       }
     } catch (error) {
       setLoading(false);
-      setError("error.message");
-      console.log(data);
+      setError(error.message);
     }
   };
   return (
