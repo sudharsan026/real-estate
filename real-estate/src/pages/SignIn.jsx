@@ -7,7 +7,7 @@ import {
   signInSuccess,
 } from "../redux/user/userSlice";
 
-const SignIn = (e) => {
+const SignIn = () => {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const SignIn = (e) => {
         navigate("/");
       }
     } catch (error) {
-      dispatch(signInFailure(data.message));
+      dispatch(signInFailure(error.message));
     }
   };
   return (

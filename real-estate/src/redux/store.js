@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import userReducer from "./user/userSlice.js";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-
+//To combine our reducers
 const rootReducer = combineReducers({ user: userReducer });
 const persistConfig = {
   key: "root", //name of our storage key - inspect and go to application to see the saved user
@@ -19,4 +19,4 @@ export const store = configureStore({
     }),
 });
 
-export const persistor = persistStore(store);
+export const persistor = persistStore(store); //this makes the store persist
